@@ -88,7 +88,7 @@
                             <img src="{{asset($accomodation->image)}}" class="card-img-top profileImg" alt="">
                             <h3 class="mt-2">{{$accomodation->roomType}}</h3>
 
-                            <p class="mt-2">“{{$accomodation->description}}...”</p>
+                            <p class="mt-2">{{ Str::limit($accomodation->description, 150, '...') }}</p>
                             <a href="{{route('roomDetails',$accomodation->slug)}}"
                                 class="btn btn-primary btn_de text-center">Read more</a>
 
