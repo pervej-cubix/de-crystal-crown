@@ -9,7 +9,7 @@
         <div class="row mt-5">
             <div class="col-md-4">
                 <a href="{{ route('home') }}">
-                    <img width="200px" src="{{asset('/')}}assets/web/images/royana_footer.png" alt="">
+                    <img width="auto" height="80px" src="{{asset('/')}}assets/web/media/brand-logo.png" alt="">
                 </a>
                 <h3 class="follow_us my-3" style="color: #ecb617;">Follow us</h3>
                 <div class="footerItem">
@@ -20,7 +20,6 @@
                     <a href="{{$social_link->youtube_link}}" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                     <a href="{{$social_link->whatsapp_link}}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
-
             </div>
             <div class="col-md-4 mt-3 text-white">
                 <div class="d-flex gap-3 align-items-center">
@@ -33,9 +32,9 @@
                 </div>
                 <div class="d-flex gap-3 align-items-center">
                     <h3><i class="fa-solid fa-location-dot"></i></h3>
-                    <h3 class="pt-2 pb-0">62 Acre. Built-up area,
+                    <h3 class="pt-2 pb-0">Gulshan 1
                         <br>
-                        Mouchak, Gazipur.
+                        Dhaka, Bangladesh.
                     </h3>
                 </div>
             </div>
@@ -44,7 +43,7 @@
                 <h3><a href="{{route('bookNow')}}" class="pagelinkunderline">Book Now </a></h3>
                 <h3><a href="{{route('virtualTours')}}" class="pagelinkunderline">Virtual Tours </a></h3>
                 <h3><a href="{{route('photoGallery')}}" class="pagelinkunderline">Photo Gallery </a></h3>
-                <h3><a href="{{route('RoyenaStars')}}" class="pagelinkunderline">Royena Stars</a></h3>
+                <h3><a href="{{route('RoyenaStars')}}" class="pagelinkunderline">De Castle Stars</a></h3>
                 <h3><a href="{{route('contact')}}" class="pagelinkunderline">Contact Us </a></h3>
             </div>
         </div>

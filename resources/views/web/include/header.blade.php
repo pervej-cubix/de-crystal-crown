@@ -22,7 +22,7 @@
             <a href="{{route('photoGallery')}}"
                 class="menuUnderline {{ request()->routeIs('photoGallery') ? 'active' : '' }}">Photo gallery</a>
             <a href="{{route('RoyenaStars')}}"
-                class="menuUnderline {{ request()->routeIs('RoyenaStars') ? 'active' : '' }}">Royena Stars</a>
+                class="menuUnderline {{ request()->routeIs('RoyenaStars') ? 'active' : '' }}">De Castle Stars</a>
             <a href="{{route('contact')}}"
                 class="menuUnderline {{ request()->routeIs('contact') ? 'active' : '' }}">Contact us</a>
         </div>

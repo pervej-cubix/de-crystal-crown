@@ -43,7 +43,7 @@
     <div class="container mt-5">
         <div class="row" style="overflow:hidden;">
             <div class="col-md-6 text-center fade-in" data-animation="fadeInLeft">
-                <img style="width: 100%;" src="{{asset('/')}}assets/web/images/slide7.jpg" alt="">
+                <img style="width: 100%;" src="{{asset('/')}}assets/web/media/about.jpg" alt="">
             </div>
             <div class="col-md-6 desc fade-in" data-animation="fadeInRight">
                 <!-- <div class="diffrent-icon"><i class="fa-solid fa-compact-disc"></i></div> -->
