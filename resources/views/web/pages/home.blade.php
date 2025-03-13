@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="container mt-5">
-        <div class="row">
+        <div class="row" style="overflow:hidden;">
             <div class="col-md-6 text-center fade-in" data-animation="fadeInLeft">
                 <img style="width: 100%;" src="{{asset('/')}}assets/web/images/slide7.jpg" alt="">
             </div>

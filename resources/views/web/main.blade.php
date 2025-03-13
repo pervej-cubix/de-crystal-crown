@@ -47,7 +47,6 @@
 
 
     @include('web.include.script')
-
 </body>
 
 </html>
