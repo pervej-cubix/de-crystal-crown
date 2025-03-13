@@ -33,7 +33,7 @@ body {
     bottom: -5px;
     left: 50%; /* Center it initially */
     transform: translateX(-50%); /* Adjust to center */
-    background-color: green;
+    background-color: orange;
     transition: width 0.3s ease, left 0.3s ease; /* Transition for both */
 }
 
@@ -653,7 +653,7 @@ section:has(.overlay) .btn_menuTwo {
     height: 2px;
     bottom: -5px; /* Adjust this value to add margin below the text */
     left: 0;
-    background-color: green;
+    background-color: orange;
     transition: width 0.3s ease;
 }
 
@@ -668,7 +668,7 @@ section:has(.overlay) .btn_menuTwo {
 
 .diningHeading {
     font-size: 40px;
-    color: green;
+    color: orange;
     padding-bottom: 5px;
     margin: 5px;
 }
@@ -682,7 +682,7 @@ section:has(.overlay) .btn_menuTwo {
     left: 50px;
     text-align: center;
     font-size: 30px;
-    color: green;
+    color: orange;
 }
 
 .threeD {
@@ -694,19 +694,19 @@ section:has(.overlay) .btn_menuTwo {
     left: 150px;
     text-align: center;
     font-size: 30px;
-    color: green;
+    color: orange;
 }
 
 .diningUnderline {
     width: 50px;
     height: 1px;
-    background: green;
+    background: orange;
 }
 
 .diningUnderline:hover {
     width: 100px;
     height: 1px;
-    background: green;
+    background: orange;
     transition: 1s;
 }
 
@@ -773,7 +773,7 @@ section:has(.overlay) .btn_menuTwo {
     left: 50px;
     text-align: center;
     font-size: 30px;
-    color: green;
+    color: orange;
     padding-top: 15px;
 }
 
@@ -786,7 +786,7 @@ section:has(.overlay) .btn_menuTwo {
     left: 150px;
     text-align: center;
     font-size: 30px;
-    color: green;
+    color: orange;
     padding-top: 15px;
 }
 
@@ -924,12 +924,12 @@ section:has(.overlay) .btn_menuTwo {
 .contactHeading {
     font-size: large;
     font-weight: 400;
-    color: green;
+    color: orange;
 }
 .contactDescription {
     font-size: medium;
     font-weight: 400;
-    color: green;
+    color: orange;
 }
 
 .formHeading {
@@ -1136,7 +1136,7 @@ section:has(.overlay) .btn_menuTwo {
 }
 
 .roomdetails {
-    color: green;
+    color: orange;
     font-size: 20px;
 }
 
@@ -1154,7 +1154,7 @@ section:has(.overlay) .btn_menuTwo {
     bottom: -5px; /* Adjust this value to add margin below the text */
     left: 50%; /* Start at the horizontal center */
     transform: translateX(-50%); /* Center the line */
-    background-color: green;
+    background-color: orange;
     transition: width 0.3s ease;
 }
 
@@ -1166,7 +1166,7 @@ section:has(.overlay) .btn_menuTwo {
     display: flex;
     justify-content: center; /* Center all items horizontally */
     gap: 20px; /* Optional: add space between items */
-    color: green;
+    color: orange;
     font-size: 16px;
     font-weight: normal;
 }

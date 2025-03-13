@@ -28,7 +28,8 @@
     <div class="container text-center mt-5">
         <div class="row">
             <div class="col-md-5 m-auto">
-                <p class="formHeading">Dear valued guest, please complete the following fields and we will contact you soon.</p>
+                <p class="formHeading">Dear valued guest, please complete the following fields and we will contact you
+                    soon.</p>
             </div>
         </div>
     </div>
@@ -45,12 +46,14 @@
                             <!-- First Name -->
                             <div class="mb-3">
 
-                                <input type="text" class="form-control formField" id="firstName" placeholder="Enter your first name">
+                                <input type="text" class="form-control formField" id="firstName"
+                                    placeholder="Enter your first name">
                             </div>
                             <!-- Email -->
                             <div class="mb-3">
 
-                                <input type="email" class="form-control formField" id="email" placeholder="Enter your email">
+                                <input type="email" class="form-control formField" id="email"
+                                    placeholder="Enter your email">
                             </div>
                         </div>
 
@@ -59,12 +62,14 @@
                             <!-- Last Name -->
                             <div class="mb-3">
 
-                                <input type="text" class="form-control formField" id="lastName" placeholder="Enter your last name">
+                                <input type="text" class="form-control formField" id="lastName"
+                                    placeholder="Enter your last name">
                             </div>
                             <!-- Phone Number -->
                             <div class="mb-3">
 
-                                <input type="text" class="form-control formField" id="phone" placeholder="Enter your phone number">
+                                <input type="text" class="form-control formField" id="phone"
+                                    placeholder="Enter your phone number">
                             </div>
                         </div>
                     </div>
@@ -73,8 +78,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mb-3">
-
-                                <input type="text" class="form-control formField" id="subject" placeholder="Enter your subject">
+                                <input type="text" class="form-control formField" id="subject"
+                                    placeholder="Enter your subject">
                             </div>
                         </div>
                     </div>
@@ -83,7 +88,8 @@
                             <!-- Textarea -->
                             <div class="mb-3">
 
-                                <textarea class="form-control " id="comments" rows="8" placeholder="Enter your comments"></textarea>
+                                <textarea class="form-control " id="comments" rows="8"
+                                    placeholder="Enter your comments"></textarea>
                             </div>
                         </div>
                     </div>
@@ -91,8 +97,8 @@
                     <!-- Submit Button -->
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <button type="button" class="btn btn-outline-secondary w-100 formBtn"> <i class="fa-solid fa-location-arrow"></i> SEND</button>
-
+                            <button type="button" class="btn btn-outline-secondary w-100 formBtn"> <i
+                                    class="fa-solid fa-location-arrow"></i> SEND</button>
                         </div>
                     </div>
                 </form>
@@ -107,7 +113,8 @@
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-md-12">
-                <iframe src="{{$social_link->map_link}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="{{$social_link->map_link}}" width="100%" height="450" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>

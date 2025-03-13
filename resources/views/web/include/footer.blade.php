@@ -28,7 +28,7 @@
                 </div>
                 <div class="d-flex gap-3 align-items-center">
                     <h3><i class="fa-solid fa-envelope"></i></h3>
-                    <h3>{{$social_link->mobile}}</h3>
+                    <h3>info@crystalcrownhotelbd.com</h3>
                 </div>
                 <div class="d-flex gap-3 align-items-center">
                     <h3><i class="fa-solid fa-location-dot"></i></h3>
