@@ -87,15 +87,12 @@
                         <div class="card boxx border-0 shadow m-2 bg-white p-2 pt-2 text-center">
                             <img src="{{asset($accomodation->image)}}" class="card-img-top profileImg" alt="">
                             <h3 class="mt-2">{{$accomodation->roomType}}</h3>
-
                             <p class="mt-2">{{ Str::limit($accomodation->description, 150, '...') }}</p>
                             <a href="{{route('roomDetails',$accomodation->slug)}}"
                                 class="btn btn-primary btn_de text-center">Read more</a>
-
                         </div>
                     </div>
                     @endforeach
-
                     <!-- Add more items here as needed -->
                 </div>
             </div>
