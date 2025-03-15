@@ -53,7 +53,14 @@
                 <h6 class="foot">© 2024.De-Crystal-Corwn. All right reserved</h6>
             </div>
             <div class="col-md-6 text-end">
-                <h6 class="foot"><a href="https://cubixbd.com/">Site By <strong>Cubix Technology</strong></a></h6>
+                <h6 class="foot">
+                    <a href="https://cubixbd.com/">Site By
+                        <img width="50px" src="{{asset('/')}}assets/web/media/cubixbd.png" data-bs-toggle="tooltip"
+                            title="Cubix Technology" />
+                        <small><strong>Cubix Technology</strong></small>
+                    </a>
+                </h6>
+
             </div>
         </div>
 

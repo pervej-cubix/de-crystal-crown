@@ -337,12 +337,7 @@ section:has(.overlay) .btn_menuTwo {
 }
 
 .fixed {
-    background-color: rgba(
-        53,
-        122,
-        63,
-        1
-    ); /* Change this to your desired color */
+    background-color: rgb(96, 121, 120); /* Change this to your desired color */
     z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
@@ -535,8 +530,6 @@ section:has(.overlay) .btn_menuTwo {
 }
 
 /* comfortable Stay */
-.comfortable .owl-theme .owl-nav {
-}
 
 #comfortable {
     margin-top: 50px;
@@ -566,11 +559,11 @@ section:has(.overlay) .btn_menuTwo {
 }
 
 .btn_de:hover {
-    background-color: rgba(53, 122, 63, 1);
+    background-color: rgb(96, 121, 120);
 }
 
 .owl-nav {
-    position: absolute; /* Positioning relative to the carousel */
+    position: absolute;
     top: 50%; /* Center vertically */
     width: 100%; /* Full width of the carousel */
     transform: translateY(-50%); /* Adjust to center */
@@ -578,17 +571,77 @@ section:has(.overlay) .btn_menuTwo {
     justify-content: space-between;
 }
 
-#comfortable .owl-carousel .owl-nav button.owl-next,
-#comfortable .owl-carousel .owl-nav button.owl-prev {
-    padding: 8px 16px !important;
-    border-radius: 100%;
-    font-size: 18px;
+/* Bootstrap Carousel */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.carousel-item img,
+.carousel-item video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: relative;
+    z-index: 2;
+}
+
+/* Make the buttons larger and add rounded corners */
+.carousel-control-prev,
+.carousel-control-next {
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    top: 50%;
+    height: 45px;
+}
+
+.carousel-control-prev {
+    left: 40px;
+}
+.carousel-control-next {
+    right: 40px;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 #comfortable .owl-nav button {
-    background: transparent; /* Transparent background */
-    border: none; /* No border */
-    font-size: 20px; /* Icon size */
+    background: transparent;
+    border: none;
+    font-size: 20px;
     color: #211f20 !important;
     padding: 10px !important;
     transition: ease-in 0.2s;
@@ -599,7 +652,7 @@ section:has(.overlay) .btn_menuTwo {
 }
 
 .owl-nav button:hover {
-    color: #0056b3; /* Color on hover */
+    color: #0056b3;
 }
 
 .owl-prev {
@@ -713,11 +766,11 @@ section:has(.overlay) .btn_menuTwo {
 #Speacitial-feature {
     width: 100%;
     height: auto;
-    background-color: #f6f6f4;
+    background-color: transparent;
 }
 
 .borderLine {
-    border-right: 1px solid gray;
+    border: 1px solid gray;
     height: 70px;
     position: absolute;
     top: 20%;
@@ -1249,9 +1302,6 @@ section:has(.overlay) .btn_menuTwo {
     padding-bottom: 2px;
 }
 
-.footerItem {
-}
-
 .footerItem a {
     /* padding-top: 33px; */
     color: #ecb617;
@@ -1263,9 +1313,6 @@ section:has(.overlay) .btn_menuTwo {
 
 .footerItem a:hover {
     color: white;
-}
-
-.fa-brands {
 }
 
 .numberUnderline {

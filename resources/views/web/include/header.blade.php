@@ -87,27 +87,37 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active" style="height: 100vh;">
+                <div class="carousel-overlay"></div> <!-- Dark overlay -->
                 <img src="{{ asset('/') }}assets/web/media/slide8.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" style="height: 100vh;">
+                <div class="carousel-overlay"></div> <!-- Dark overlay -->
                 <img src="{{ asset('/') }}assets/web/media/slide9.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" style="100vh;">
+            <div class="carousel-item" style="height: 100vh;">
+                <div class="carousel-overlay"></div> <!-- Dark overlay -->
                 <video class="be-bg-video" autoplay="autoplay" loop="loop" muted="muted" preload="auto"
-                    style="width: 1181.33px; height: 664px; left: -398.667px; top: 0px; display: block;">
+                    style="width: 100%; height: 100%; object-fit: cover;">
                     <source src="{{ asset('/') }}assets/web/media/video-slide1.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
 
+
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span aria-hidden="true">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span aria-hidden="true">
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
             <span class="visually-hidden">Next</span>
         </button>
+
     </div
