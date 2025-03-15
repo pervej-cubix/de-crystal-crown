@@ -14,7 +14,7 @@
             <a href="{{route('meetingsEvents')}}"
                 class="menuUnderline {{ request()->routeIs('meetingsEvents') ? 'active' : '' }}">Meetings & Events</a>
             <a href="{{route('recreation')}}"
-                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Recreation</a>
+                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Restaurent</a>
             <a href="{{route('payOnLine')}}"
                 class="menuUnderline {{ request()->routeIs('payOnLine') ? 'active' : '' }}">Pay one line</a>
             <a href="{{route('virtualTours')}}"
@@ -74,36 +74,30 @@
             </div>
         </div>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
         data-bs-pause="true">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
-
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
 
         <div class="carousel-inner">
             <div class="carousel-item active" style="height: 100vh;">
                 <img src="{{ asset('/') }}assets/web/media/slide8.jpg" class="d-block w-100" alt="...">
             </div>
-
             <div class="carousel-item" style="height: 100vh;">
                 <img src="{{ asset('/') }}assets/web/media/slide9.jpg" class="d-block w-100" alt="...">
             </div>
-
-            <!-- ✅ YouTube Video Slide -->
-            <!-- <div class="carousel-item" style="height: 100vh;">
-                <div class="ratio ratio-16x9 w-100">
-                    <iframe
-                        src="https://www.youtube.com/embed/mJVuZiK9a6I?autoplay=1&mute=1&loop=1&playlist=mJVuZiK9a6I"
-                        title="YouTube video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div> -->
+            <div class="carousel-item" style="100vh;">
+                <video class="be-bg-video" autoplay="autoplay" loop="loop" muted="muted" preload="auto"
+                    style="width: 1181.33px; height: 664px; left: -398.667px; top: 0px; display: block;">
+                    <source src="{{ asset('/') }}assets/web/media/video-slide1.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

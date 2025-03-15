@@ -14,7 +14,7 @@
             <a href="{{route('meetingsEvents')}}"
                 class="menuUnderline {{ request()->routeIs('meetingsEvents') ? 'active' : '' }}">Meetings & Events</a>
             <a href="{{route('recreation')}}"
-                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Recreation</a>
+                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Restaurent</a>
             <a href="{{route('payOnLine')}}"
                 class="menuUnderline {{ request()->routeIs('payOnLine') ? 'active' : '' }}">Pay one line</a>
             <a href="{{route('virtualTours')}}"

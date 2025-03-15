@@ -34,7 +34,6 @@
     color: #ecb617;
 }
 
-
 .booknowHomeTwo {
     position: fixed;
     top: 0;
@@ -50,8 +49,8 @@
     background-color: rgba(53, 122, 63, 1);
 }
 
-.booknowHomeTwo:hover {         
-    color: gold;                
+.booknowHomeTwo:hover {
+    color: gold;
 }
 
 .booknow {
@@ -59,5 +58,5 @@
     text-transform: capitalize;
     line-height: 13px;
     letter-spacing: 2px;
-    font-size: 14px;!important
+    font-size: 14px !important;
 }
