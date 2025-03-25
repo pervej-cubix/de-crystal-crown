@@ -61,12 +61,6 @@
                             <!-- Email -->
                             <div class="mb-3">
                                 <label for="roomtype">Room Type</label>
-                                <!-- <select name="roomtype" class="form-select formField " id="roomtype" required>
-                                    <option value="">-- Select --</option>
-                                    @foreach($roomTypes as $roomType)
-                                    <option value="{{ $roomType['roomid'] }}">{{ $roomType['roomtype'] }}</option>
-                                    @endforeach
-                                </select> -->
                                 <select name="roomtype" class="form-select formField " id="roomtype" required>
                                     <option value="">-- Select --</option>
                                     <option value="Deluxe Single">
@@ -93,13 +87,13 @@
                             <!-- check out -->
                             <div class="mb-3">
                                 <label for="checkout">Check out</label>
-                                <input type="date" class="form-control formField reservation_formField" name="checkout"
+                                    <input type="date" class="form-control formField reservation_formField" name="checkout"
                                     id="checkout" placeholder="Select Date" required>
                             </div>
                             <div class="mb-3">
                                 <label for="adult_no">No. of Adults </label>
                                 <input type="number" class="form-control formField reservation_formField"
-                                    name="adult_no" id="adult_no" placeholder="Enter your No. of Adults" required>
+                                    name="adult_no" id="adult_no" placeholder="Enter your No. of Adults" max="10" required>
                             </div>
                         </div>
                     </div>
@@ -110,19 +104,12 @@
                             <div class="mb-3">
                                 <label for="child_no">No. of Children</label>
                                 <input type="number" class="form-control formField reservation_formField"
-                                    name="child_no" id="child_no" placeholder="No. of Children">
+                                    name="child_no" id="child_no" max="10" placeholder="No. of Children">
                             </div>
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="country">Country</label>
-                            <!-- <select name="country" class="form-select formField" id="country" required>
-                                @foreach($countries as $country)
-                                <option value="{{ $country['id'] }}" @if($country['en_short_name']==='Bangladesh' )
-                                    selected @endif>
-                                    {{ $country['en_short_name'] }}
-                                </option>
-                                @endforeach
-                            </select> -->
+                      
                             <select name="country" class="form-select formField" id="country" required>
                                 <option value="Bangladesh" selected>Bangladesh</option>
                                 <option value="India">India</option>
@@ -135,7 +122,6 @@
                                 <option value="Thailand">Thailand</option>
                                 <option value="Indonesia">Indonesia</option>
                             </select>
-
                         </div>
                         <div class="mb-3 col-md-2">
                             <label for="title">Title</label>
@@ -201,7 +187,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- {!! NoCaptcha::display() !!} -->
+                    {!! NoCaptcha::display() !!}
                     <!-- Submit Button -->
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -211,7 +197,7 @@
                         </div>
                     </div>
                 </form>
-                <!-- {!! NoCaptcha::renderJs() !!} -->
+                {!! NoCaptcha::renderJs() !!}
             </div>
         </div>
     </div>
@@ -245,8 +231,11 @@
 <script>
 document.getElementById("reservationForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    return;
     const formData = {};
+
+    const btn = document.getElementById("submitBtn");
+    btn.disabled = true;
+    btn.innerText = "Submitting...";
 
     // Get all form fields
     const formFields = document.querySelectorAll(".formField");
@@ -254,6 +243,15 @@ document.getElementById("reservationForm").addEventListener("submit", function(e
     formFields.forEach(field => {
         formData[field.name] = field.value;
     });
+
+    if (!formData.checkin || !formData.checkout) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Missing Dates',
+            text: 'Please select both check in and check out dates!',
+        });
+        return; 
+    }
 
     const recaptchaResponse = grecaptcha.getResponse();
     if (recaptchaResponse.length === 0) {
@@ -263,7 +261,7 @@ document.getElementById("reservationForm").addEventListener("submit", function(e
             title: 'Captcha Required',
             text: 'Please complete the CAPTCHA to proceed.',
         });
-        return; // Stop the form submission
+        return;
     }
 
     fetch('/reservation', {
@@ -276,7 +274,9 @@ document.getElementById("reservationForm").addEventListener("submit", function(e
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data, " fffffffffff")
+            console.log(data, "fff")
+            btn.disabled = false;
+            btn.innerText = "Book Now";
             Swal.fire({
                 icon: 'success',
                 title: 'Reservation Successful',
@@ -292,68 +292,68 @@ document.getElementById("reservationForm").addEventListener("submit", function(e
                 text: error.message,
             });
         });
-
+   
     document.getElementById("reservationForm").reset();
-    grecaptcha.reset();
+    // grecaptcha.reset();
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    const checkin = document.getElementById('checkin');
-    const checkout = document.getElementById('checkout');
-    const roomtype = document.getElementById('roomtype');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const checkin = document.getElementById('checkin');
+//     const checkout = document.getElementById('checkout');
+//     const roomtype = document.getElementById('roomtype');
 
-    function availabilityCheck() {
-        const bodyData = {
-            checkin: checkin.value,
-            checkout: checkout.value,
-            roomtype: roomtype.value
-        };
+//     function availabilityCheck() {
+//         const bodyData = {
+//             checkin: checkin.value,
+//             checkout: checkout.value,
+//             roomtype: roomtype.value
+//         };
 
-        // Make sure all values are filled before sending the request
-        if (bodyData.checkin && bodyData.checkout && bodyData.roomtype) {
-            // resultDiv.innerText = "Checking availability...";
+//         // Make sure all values are filled before sending the request
+//         if (bodyData.checkin && bodyData.checkout && bodyData.roomtype) {
+//             // resultDiv.innerText = "Checking availability...";
 
-            fetch("{{ url('/reservation-check') }}", {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    },
-                    body: JSON.stringify(bodyData)
-                })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data, "xxxxxx");
-                    if (data.status == "success") {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Available!',
-                            text: data.message
-                        });
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Not Available',
-                            text: data.message
-                        });
-                    }
-                })
-                .catch(err => {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Not Available',
-                        text: "Error checking availability"
-                    });
-                    console.log(err);
-                });
-        }
-    }
+//             fetch("{{ url('/reservation-check') }}", {
+//                     method: 'POST',
+//                     headers: {
+//                         'Content-Type': 'application/json',
+//                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
+//                     },
+//                     body: JSON.stringify(bodyData)
+//                 })
+//                 .then(res => res.json())
+//                 .then(data => {
+//                     console.log(data, "xxxxxx");
+//                     if (data.status == "success") {
+//                         Swal.fire({
+//                             icon: 'success',
+//                             title: 'Available!',
+//                             text: data.message
+//                         });
+//                     } else {
+//                         Swal.fire({
+//                             icon: 'error',
+//                             title: 'Not Available',
+//                             text: data.message
+//                         });
+//                     }
+//                 })
+//                 .catch(err => {
+//                     Swal.fire({
+//                         icon: 'error',
+//                         title: 'Not Available',
+//                         text: "Error checking availability"
+//                     });
+//                     console.log(err);
+//                 });
+//         }
+//     }
 
-    // Attach onchange listeners
-    // [checkin, checkout, roomtype].forEach(input => {
-    //     input.addEventListener('change', availabilityCheck);
-    // });
+//     // Attach onchange listeners
+//     // [checkin, checkout, roomtype].forEach(input => {
+//     //     input.addEventListener('change', availabilityCheck);
+//     // });
 
-});
+// });
 </script>
 @endsection

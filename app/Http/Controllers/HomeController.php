@@ -127,6 +127,11 @@ class HomeController extends Controller
     }
 
     public function bookNow()
+    {
+        return view('web.pages.bookNow');
+    }
+
+    public function BookingDetails()
 {
     $apiUrl = env('API_URL');
 
