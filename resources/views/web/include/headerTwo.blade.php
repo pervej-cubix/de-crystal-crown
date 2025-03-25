@@ -9,8 +9,8 @@
                 class="menuUnderline {{ request()->routeIs('accommodation') ? 'active' : '' }}">Accommodation</a>
             <a href="{{route('dining')}}"
                 class="menuUnderline {{ request()->routeIs('dining') ? 'active' : '' }}">Dining</a>
-            <a href="{{route('promotion')}}"
-                class="menuUnderline {{ request()->routeIs('promotion') ? 'active' : '' }}">Promotions</a>
+            <!-- <a href="{{route('promotion')}}"
+                class="menuUnderline {{ request()->routeIs('promotion') ? 'active' : '' }}">Promotions</a> -->
             <a href="{{route('meetingsEvents')}}"
                 class="menuUnderline {{ request()->routeIs('meetingsEvents') ? 'active' : '' }}">Meetings & Events</a>
             <a href="{{route('recreation')}}"

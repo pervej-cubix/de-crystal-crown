@@ -49,7 +49,7 @@
     </div>
 </section>
 
-<section>
+<!-- <section>
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section id="Speacitial-feature">
     <div class="container mt-5 ">
@@ -179,16 +179,5 @@
         </div>
     </div>
 </section>
-
-<section>
-    <div class="container mt-5 ">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h4 class="roomService">Discover Other Rooms & Suites </h4>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 @endsection

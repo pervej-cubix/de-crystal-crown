@@ -32,9 +32,7 @@
                 </div>
                 <div class="d-flex gap-3 align-items-center">
                     <h3><i class="fa-solid fa-location-dot"></i></h3>
-                    <h3 class="pt-2 pb-0">Gulshan 1
-                        <br>
-                        Dhaka, Bangladesh.
+                    <h3 class="pt-2 pb-0">House-5, Road-23/A, Gulshan-1 <br />Dhaka-1212, Bangladesh.
                     </h3>
                 </div>
             </div>

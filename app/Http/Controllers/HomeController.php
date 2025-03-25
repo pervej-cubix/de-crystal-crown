@@ -128,10 +128,11 @@ class HomeController extends Controller
 
     public function bookNow()
 {
-    $countryUrl = "http://192.168.0.185/pms-ci/api/countrysList";
-    $roomTypesUrl = "http://192.168.0.185/pms-ci/api/roomTypes";
+    $apiUrl = env('API_URL');
 
-    $settingsUrl = "http://192.168.0.185/pms-ci/api/settings";
+    $countryUrl = "$apiUrl/countrysList";
+    $roomTypesUrl = "$apiUrl/roomTypes";
+    $settingsUrl = "$apiUrl/settings";
 
     $chCurl = curl_init();
     // Set cURL options

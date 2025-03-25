@@ -19,12 +19,12 @@ body {
         </div>
         <div class="row mt-5">
             <div class="col-md-8 m-auto">
-                <p style="text-align: justify;">Royena Resort offers a variety of accommodations to cater to different
-                    guest needs, including the Premium Family Suite, Deluxe King, Superior King, Premium King, Superior
-                    Twin, and Superior Suite. Each room combines comfort and elegance, featuring modern amenities and
-                    stylish decor. Large windows provide natural light and beautiful views of the resort’s lush
-                    surroundings, making it an ideal destination for families, couples, and solo travelers seeking a
-                    tranquil escape in Gazipur.</p>
+                <p style="text-align: justify;">Hotel De Crystal Crown offers a refined blend of comfort, luxury, and
+                    convenience for all types of travelers. From well-appointed Deluxe Rooms to spacious Executive
+                    Suites, each accommodation is thoughtfully designed with modern amenities and tasteful interiors.
+                    Whether you're visiting for business or leisure, guests can enjoy personalized service, a relaxing
+                    atmosphere, and a prime location close to major attractions. With scenic views, cozy ambiance, and
+                    exceptional hospitality, Hotel Crystal Crown is the perfect destination for a memorable stay</p>
             </div>
         </div>
 

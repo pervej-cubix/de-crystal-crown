@@ -10,9 +10,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 text-center m-auto">
-                <h3 style="color: green;">Book Now</h3>
+                <h3 style="color: #607978; font-weight: bold;">Book Now</h3>
                 <p class="bookNowText">
-                    We would like to welcome you to Sarah Resort. Please fill in the following booking form and send it
+                    We would like to welcome you to Hotel De Crystal Crown. Please fill in the following booking form
+                    and
+                    send it
                     to us. We will get back to you with confirmation as soon as possible.</p>
             </div>
         </div>
@@ -56,15 +58,32 @@
                                 <input type="date" class="form-control formField reservation_formField" id="checkin"
                                     name="checkin" placeholder="Select Date" required>
                             </div>
-
                             <!-- Email -->
                             <div class="mb-3">
                                 <label for="roomtype">Room Type</label>
-                                <select name="roomtype" class="form-select formField " id="roomtype" required>
+                                <!-- <select name="roomtype" class="form-select formField " id="roomtype" required>
                                     <option value="">-- Select --</option>
                                     @foreach($roomTypes as $roomType)
                                     <option value="{{ $roomType['roomid'] }}">{{ $roomType['roomtype'] }}</option>
                                     @endforeach
+                                </select> -->
+                                <select name="roomtype" class="form-select formField " id="roomtype" required>
+                                    <option value="">-- Select --</option>
+                                    <option value="Deluxe Single">
+                                        Deluxe Single
+                                    </option>
+                                    <option value="Super Deluxe">
+                                        Deluxe Double
+                                    </option>
+                                    <option value="Super Deluxe">
+                                        Super Deluxe
+                                    </option>
+                                    <option value="Super Deluxe">
+                                        Super Deluxe (Twin)
+                                    </option>
+                                    <option value="Super Deluxe">
+                                        Family Suit (Triple)
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -96,13 +115,25 @@
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="country">Country</label>
-                            <select name="country" class="form-select formField" id="country" required>
+                            <!-- <select name="country" class="form-select formField" id="country" required>
                                 @foreach($countries as $country)
                                 <option value="{{ $country['id'] }}" @if($country['en_short_name']==='Bangladesh' )
                                     selected @endif>
                                     {{ $country['en_short_name'] }}
                                 </option>
                                 @endforeach
+                            </select> -->
+                            <select name="country" class="form-select formField" id="country" required>
+                                <option value="Bangladesh" selected>Bangladesh</option>
+                                <option value="India">India</option>
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="Nepal">Nepal</option>
+                                <option value="Sri Lanka">Sri Lanka</option>
+                                <option value="China">China</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Indonesia">Indonesia</option>
                             </select>
 
                         </div>
@@ -170,16 +201,17 @@
                             </div>
                         </div>
                     </div>
-                    {!! NoCaptcha::display() !!}
+                    <!-- {!! NoCaptcha::display() !!} -->
                     <!-- Submit Button -->
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-success float-end formBtn text-white" id="submitBtn"
-                                style="font-size:18px"> <i class="fa-solid fa-location-arrow"></i> Book Now</button>
+                            <button type="submit" style="background-color: #607978;"
+                                class="btn btn-success float-end text-white" id="submitBtn" style="font-size:18px"> <i
+                                    class="fa-solid fa-location-arrow"></i> Book Now</button>
                         </div>
                     </div>
                 </form>
-                {!! NoCaptcha::renderJs() !!}
+                <!-- {!! NoCaptcha::renderJs() !!} -->
             </div>
         </div>
     </div>
@@ -187,34 +219,25 @@
 <section id="Speacitial-feature">
     <div class="container mt-5 p-3 text-center ">
         <div class="row ">
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
                 <div class="contactIcon"><i class="fa-solid fa-location-dot"></i></div>
-                <div class="contactHeading">Resort Address</div>
-                <p class="contactDescription">Sarah Resort Rajabari, Rajendrapur, Sreepur, Gazipur, Dhaka, Bangladesh
-                </p>
+                <div class="contactHeading">Address</div>
+                <h3 class="pt-2 pb-0 contactDescription">House-5, Road-23/A, Gulshan-1 <br />Dhaka-1212, Bangladesh.
+                </h3>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contactIcon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contactHeading">Phone Support <small>24 Hours a Day</small></div>
+                <div class="contactDescription">+8801856-230550</div>
+                <div class="contactDescription">info@crystalcrownhotelbd.com</div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contactIcon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contactHeading">Hotline</div>
+                <div class="contactDescription">+8801856-230550 </div>
+                <div class="contactDescription">sales@crystalcrownhotelbd.com</div>
             </div>
 
-            <div class="col-md-3 text-center">
-                <div class="contactIcon"><i class="fa-solid fa-location-dot"></i></div>
-                <div class="contactHeading">Corporate Office</div>
-                <p class="contactDescription">Fortis Sports Club, Notun Bazar, Boro Beraid, (Behind AKM Rahmatullah
-                    University College), Dhaka-1212</p>
-
-            </div>
-            <div class="col-md-3  text-center">
-                <div class="contactIcon"><i class="fa-solid fa-phone"></i></div>
-                <div class="contactHeading">Reservation Hotline</div>
-                <div class="contactDescription">01332556276</div>
-                <div class="contactDescription">reservation@sarahresort.com</div>
-            </div>
-            <div class="col-md-3  text-center">
-                <div class="contactIcon"><i class="fa-solid fa-phone"></i></div>
-                <div class="contactHeading">Corporate Booking</div>
-                <div class="contactDescription">+8801958 600 303-307</d>
-                    <div class="contactDescription">sales@sarahresort.com</d>
-                    </div>
-                </div>
-            </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -222,6 +245,7 @@
 <script>
 document.getElementById("reservationForm").addEventListener("submit", function(event) {
     event.preventDefault();
+    return;
     const formData = {};
 
     // Get all form fields
@@ -326,9 +350,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Attach onchange listeners
-    [checkin, checkout, roomtype].forEach(input => {
-        input.addEventListener('change', availabilityCheck);
-    });
+    // [checkin, checkout, roomtype].forEach(input => {
+    //     input.addEventListener('change', availabilityCheck);
+    // });
 
 });
 </script>

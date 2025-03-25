@@ -12,11 +12,24 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-8 m-auto">
-                <p style="text-align: justify;">This upscale hotel offers indoor and outdoor games for both children
-                    and adult including large activity field such as Football and Cricket. We have also futsal where
-                    guests can play Lawn Tennis, Badminton, Basketball and Volleyball. Apart to this we have Billiard,
-                    Table Tennis, Archery. Cycling / Tandem-Cycling / Triplet-Cycling, Boating, Kids Electric-Motorcycle
-                    & Car. Gyms, 9D movie,Water Sports and so on.</p>
+                <p style="text-align: justify;">Hotel De Crystal Crown offers a diverse range of dining options to
+                    delight every guest. Our restaurant features an impressive buffet menu, including breakfast, lunch,
+                    and dinner, ensuring a variety of delectable dishes to satisfy all palates. For those seeking
+                    flexibility, our à la carte menu is available 24/7, allowing guests to enjoy meals at their
+                    convenience. Additionally, our on-premise coffee shop provides a cozy ambiance for guests to relax
+                    and savor freshly brewed beverages. ​
+
+                    Our skilled chefs are dedicated to crafting culinary delights that will leave a lasting impression,
+                    making your dining experience at Hotel De Crystal Crown truly memorable. ​
+                    crystalcrownhotelbd.com
+                    +4
+                    crystalcrownhotelbd.com
+                    +4
+                    crystalcrownhotelbd.com
+                    +4
+
+                    For reservations or inquiries, please contact us at +8801856-230550 or email
+                    sales@crystalcrownhotelbd.com.</p>
             </div>
         </div>
     </div>

@@ -11,7 +11,8 @@ class ReservationController extends Controller
 {
     public function sendReservationMail(Request $request)
     {
-        $settingsUrl = "http://192.168.0.185/pms-ci/api/settings";
+        $apiUrl = env('API_URL');
+        $settingsUrl = "$apiUrl/settings";
         
         $chCurl = curl_init();
         // Set cURL options
@@ -91,8 +92,8 @@ class ReservationController extends Controller
         // ];
 
         
-        $server_url = 'http://192.168.0.185/pms-ci/api/store_reservation';
-$ch = curl_init();
+        $server_url = "$apiUrl/store_reservation";
+        $ch = curl_init();
 
 // Set cURL options
 curl_setopt($ch, CURLOPT_URL, $server_url);            // URL to send request
@@ -153,7 +154,8 @@ if (isset($response->status) && $response->status == 'success') {
 }
 
     public function reservationCheck(Request $request){        
-        $settingsUrl = "http://192.168.0.185/pms-ci/api/settings";
+        $apiUrl = env('API_URL');      
+        $settingsUrl = "$apiUrl/settings";
         
         $chCurl = curl_init();
         // Set cURL options
