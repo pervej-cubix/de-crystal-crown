@@ -9,20 +9,20 @@
                 class="menuUnderline {{ request()->routeIs('accommodation') ? 'active' : '' }}">Accommodation</a>
             <a href="{{route('dining')}}"
                 class="menuUnderline {{ request()->routeIs('dining') ? 'active' : '' }}">Dining</a>
-            <!-- <a href="{{route('promotion')}}"
-                class="menuUnderline {{ request()->routeIs('promotion') ? 'active' : '' }}">Promotions</a> -->
+            <a href="{{route('promotion')}}"
+                class="menuUnderline {{ request()->routeIs('promotion') ? 'active' : '' }}">Promotions</a>
             <a href="{{route('meetingsEvents')}}"
                 class="menuUnderline {{ request()->routeIs('meetingsEvents') ? 'active' : '' }}">Meetings & Events</a>
             <a href="{{route('recreation')}}"
-                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Restaurent</a>
+                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Recreation</a>
             <a href="{{route('payOnLine')}}"
                 class="menuUnderline {{ request()->routeIs('payOnLine') ? 'active' : '' }}">Pay one line</a>
             <a href="{{route('virtualTours')}}"
                 class="menuUnderline {{ request()->routeIs('virtualTours') ? 'active' : '' }}">Virtual Tours</a>
             <a href="{{route('photoGallery')}}"
                 class="menuUnderline {{ request()->routeIs('photoGallery') ? 'active' : '' }}">Photo gallery</a>
-            <a href="{{route('RoyenaStars')}}"
-                class="menuUnderline {{ request()->routeIs('RoyenaStars') ? 'active' : '' }}">De Castle Stars</a>
+            <a href="{{route('DeCastleStars')}}"
+                class="menuUnderline {{ request()->routeIs('DeCastleStars') ? 'active' : '' }}">De Castle Stars</a>
             <a href="{{route('contact')}}"
                 class="menuUnderline {{ request()->routeIs('contact') ? 'active' : '' }}">Contact us</a>
         </div>
@@ -40,7 +40,6 @@
                             <div class="label_stick" bis_skin_checked="1">MENU</div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

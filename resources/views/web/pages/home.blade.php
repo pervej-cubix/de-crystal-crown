@@ -6,7 +6,7 @@
 <section>
     <div class="container mt-5">
         <div class="row align-items-center">
-            <h2 class="about-heading-first"><b>about us</b></h2> <!-- Added animation to the heading -->
+            <h2 class="about-heading-first mt-4"><b>about us</b></h2> <!-- Added animation to the heading -->
             <div class="col-md-6 sm-12 lg-3">
                 <h1 class="about-heading">A best place to enjoy your stay</h1>
                 <p class="about-paragrape">

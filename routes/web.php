@@ -35,7 +35,7 @@ Route::get(uri: '/recreation', action: [HomeController::class, 'recreation'])->n
 Route::get(uri: '/pay-on-line', action: [HomeController::class, 'payOnLine'])->name('payOnLine');
 Route::get(uri: '/virtual-tours', action: [HomeController::class, 'virtualTours'])->name('virtualTours');
 Route::get(uri: '/photo-gallery', action: [HomeController::class, 'photoGallery'])->name('photoGallery');
-Route::get(uri: '/royenaStars', action: [HomeController::class, 'loyaltyProgram'])->name('RoyenaStars');
+Route::get(uri: '/royenaStar', action: [HomeController::class, 'loyaltyProgram'])->name('DeCastleStars');
 Route::get(uri: '/contact-us', action: [HomeController::class, 'contact'])->name('contact');
 Route::post('/reservation', [ReservationController::class, 'sendReservationMail']);
 Route::post('/reservation-check', [ReservationController::class, 'reservationCheck']);
@@ -46,7 +46,6 @@ Route::get(uri: '/room-details/{slug}', action: [HomeController::class, 'roomDet
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
 
     Route::get('/dashboard', [dashboardController::class, 'dashboard'])->name('dashboard');
-
     Route::get('/promotion-manage', action: [PromotionController::class, 'index'])->name('promotion-view');
     Route::post('/promotion-store', action: [PromotionController::class, 'store'])->name('promotion-store');
     Route::get('/promotion-edit/{id}', action: [PromotionController::class, 'edit'])->name('promotion-edit');

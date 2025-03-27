@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a class="diningHeading">Restaurent</a>
+                <a class="diningHeading">Recreation</a>
             </div>
         </div>
         <div class="row mt-5">

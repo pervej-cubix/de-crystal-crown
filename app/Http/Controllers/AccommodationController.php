@@ -74,7 +74,6 @@ class AccommodationController extends Controller
         return back()->with('messages', 'Accommodation save successfully');
     }
 
-
     public function destroy($id)
     {
         $accomodation = Accomodation::find($id);

@@ -34,7 +34,6 @@
         </div>
     </div>
 </section>
-
 <section>
     <div class="container mt-5">
         <div class="row">
@@ -45,13 +44,11 @@
                         <div class="col-md-6">
                             <!-- First Name -->
                             <div class="mb-3">
-
                                 <input type="text" class="form-control formField" id="firstName"
                                     placeholder="Enter your first name">
                             </div>
                             <!-- Email -->
                             <div class="mb-3">
-
                                 <input type="email" class="form-control formField" id="email"
                                     placeholder="Enter your email">
                             </div>

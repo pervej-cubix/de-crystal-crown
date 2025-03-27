@@ -1,6 +1,20 @@
+<style>
+    .carousel-inner .carousel-item{
+        height: 100vh;
+        position: relative;
+    }
+
+    .carousel-item img,
+.carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video & image fill the container */
+}
+</style>
+
 <section>
     <!-- Full Screen Overlay Menu -->
-    <div id="fullscreenMenu" class="overlay">
+    <div id="fullscreenMenu" class="overlay" style="height: 100vh;">
         <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
         <div class="overlay-content">
             <a href="{{ route('home') }}"
@@ -9,31 +23,29 @@
                 class="menuUnderline {{ request()->routeIs('accommodation') ? 'active' : '' }}">Accommodation</a>
             <a href="{{route('dining')}}"
                 class="menuUnderline {{ request()->routeIs('dining') ? 'active' : '' }}">Dining</a>
-            <!-- <a href="{{route('promotion')}}"
-                class="menuUnderline {{ request()->routeIs('promotion') ? 'active' : '' }}">Promotions</a> -->
+            <a href="{{route('promotion')}}"
+                class="menuUnderline {{ request()->routeIs('promotion') ? 'active' : '' }}">Promotions</a>
             <a href="{{route('meetingsEvents')}}"
                 class="menuUnderline {{ request()->routeIs('meetingsEvents') ? 'active' : '' }}">Meetings & Events</a>
             <a href="{{route('recreation')}}"
-                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Restaurent</a>
+                class="menuUnderline {{ request()->routeIs('recreation') ? 'active' : '' }}">Recreation</a>
             <a href="{{route('payOnLine')}}"
                 class="menuUnderline {{ request()->routeIs('payOnLine') ? 'active' : '' }}">Pay one line</a>
             <a href="{{route('virtualTours')}}"
                 class="menuUnderline {{ request()->routeIs('virtualTours') ? 'active' : '' }}">Virtual Tours</a>
             <a href="{{route('photoGallery')}}"
                 class="menuUnderline {{ request()->routeIs('photoGallery') ? 'active' : '' }}">Photo gallery</a>
-            <a href="{{route('RoyenaStars')}}"
-                class="menuUnderline {{ request()->routeIs('RoyenaStars') ? 'active' : '' }}">De Castle Stars</a>
+            <a href="{{route('DeCastleStars')}}"
+                class="menuUnderline {{ request()->routeIs('DeCastleStars') ? 'active' : '' }}">De Castle Stars</a>
             <a href="{{route('contact')}}"
                 class="menuUnderline {{ request()->routeIs('contact') ? 'active' : '' }}">Contact us</a>
         </div>
     </div>
-
     <div class="logo animate__animated animate__fadeInDown">
         <a href="{{ route('home') }}">
             <img width="auto" height="90px" src="{{asset('/')}}assets/web/media/brand-logo.png" alt="">
         </a>
     </div>
-
     <a href="{{route('bookNow')}}" class="booknowHome animate__animated animate__fadeInRight">
         <div><i class="fa-solid fa-calendar-days"></i></div>
         <span class="booknow">Book Now</span>
@@ -86,24 +98,21 @@
         </div>
 
         <div class="carousel-inner">
-            <div class="carousel-item active" style="height: 100vh;">
+            <div class="carousel-item active">
                 <div class="carousel-overlay"></div> <!-- Dark overlay -->
-                <img src="{{ asset('/') }}assets/web/media/slide8.jpg" class="d-block w-100" alt="...">
+                <img class="img-fluid" src="{{ asset('/') }}assets/web/media/slide8.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" style="height: 100vh;">
+            <div class="carousel-item">
                 <div class="carousel-overlay"></div> <!-- Dark overlay -->
-                <img src="{{ asset('/') }}assets/web/media/slide9.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" style="height: 100vh;">
+                <img class="img-fluid" src="{{ asset('/') }}assets/web/media/slide9.jpg" class="d-block w-100" alt="...">
+            </div> 
+            <div class="carousel-item">
                 <div class="carousel-overlay"></div> <!-- Dark overlay -->
-                <video class="be-bg-video" autoplay="autoplay" loop="loop" muted="muted" preload="auto"
-                    style="width: 100%; height: 100%; object-fit: cover;">
+                <video class="be-bg-video d-block w-100" autoplay="autoplay" loop="loop" muted="muted" preload="auto">
                     <source src="{{ asset('/') }}assets/web/media/video-slide1.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
-
-
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">

@@ -593,6 +593,15 @@ section:has(.overlay) .btn_menuTwo {
     height: 100%;
 }
 
+@media (max-width: 9935px) {
+    .carousel-item img,
+    .carousel-item video {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh !important;
+    }
+}
+
 .carousel-caption {
     position: relative;
     z-index: 2;
@@ -1371,6 +1380,10 @@ section:has(.overlay) .btn_menuTwo {
 }
 
 @media screen and (max-width: 932px) {
+    .logo {
+        top: 18px !important;
+        left: 45% !important;
+    }
     /* Show the responsive menu and hide the desktop menu */
 
     /* Global */
@@ -1391,11 +1404,32 @@ section:has(.overlay) .btn_menuTwo {
     }
 
     /* book now */
+    .booknowHomeTwo,
     .booknowHome {
-        display: none;
+        width: 46px;
+        height: 48px;
+        padding: 4px;
+        font-size: 9px !important;
     }
-    .booknowHomeTwo {
-        display: none;
+
+    .booknowHomeTwo span,
+    .booknowHome span {
+        font-size: 10px !important;
+    }
+
+    .booknowHomeTwo .fa-calendar-days,
+    .booknowHome .fa-calendar-days {
+        font-size: 14px !important;
+    }
+
+    .booknowHomeTwo span,
+    .booknowHomeTwo span {
+        font-size: 10px !important;
+    }
+
+    .booknowHomeTwo .fa-calendar-days,
+    .booknowHomeTwo .fa-calendar-days {
+        font-size: 14px !important;
     }
 
     /* menu */

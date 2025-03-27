@@ -108,6 +108,10 @@
                 </h6>
             </div>
             <div class="col-md-2 text-center">
+                    <h6>Room Rake Rate</h6>
+                    <h6 class="roomdetails">BDT {{$accommodation->rakeRate}}++</h6>
+            </div>
+            <!-- <div class="col-md-2 text-center">
                 @php
                 $price = 00;
                 $exchangeRate = 0.0091; // Example: 1 BDT = 0.0091 USDT (Update as needed)
@@ -134,7 +138,7 @@
                     <h3>{{ $price }} <span style="font-size: 16px; font-weight: 600;">BDT</span>
                     </h3>
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-2 text-center">
                 <a href="{{route('bookNow')}}" class="btn btn-primary btn_de text-center">Book Now</a>
                 <div class="col-md-12 text-end mt-3">

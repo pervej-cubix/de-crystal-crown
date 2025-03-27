@@ -115,10 +115,16 @@ class HomeController extends Controller
         ]);
     }
 
-    public function contact()
+    public function contact(Request $request)
     {
+        // $requestData = $request->all();
+    
+        // Print the data
+        // dd($requestData);
+        // exit();
         $addresses = Address::where('status', 1)->get();
         $social_link = SocialLink::select('map_link')->where('status', 1)->first();
+
         // dd($social_link);
         return view('web.pages.contact', [
             'addresses' => $addresses,
