@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MeetingController;
 use App\Http\Controllers\PhotoGalleryController;
 use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\HomepageSliderController;
 use App\Http\Controllers\RecreationController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SocialLinkController;
@@ -42,15 +43,20 @@ Route::post('/reservation-check', [ReservationController::class, 'reservationChe
 Route::get(uri: '/book-now', action: [HomeController::class, 'bookNow'])->name('bookNow');
 Route::get(uri: '/room-details/{slug}', action: [HomeController::class, 'roomDetails'])->name('roomDetails');
 
-
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
-
     Route::get('/dashboard', [dashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/promotion-manage', action: [PromotionController::class, 'index'])->name('promotion-view');
     Route::post('/promotion-store', action: [PromotionController::class, 'store'])->name('promotion-store');
     Route::get('/promotion-edit/{id}', action: [PromotionController::class, 'edit'])->name('promotion-edit');
     Route::put('/promotion-update/{id}', action: [PromotionController::class, 'update'])->name('promotion-update');
     Route::delete('/promotion.destroy/{id}', action: [PromotionController::class, 'delete'])->name('promotion.destroy');
+
+    Route::get('/homepage-slider-manage', action: [HomepageSliderController::class, 'index'])->name('homepage-slider-view');
+    Route::post('/homepage-slider-store', action: [HomepageSliderController::class, 'store'])->name('homepage-slider-store');
+    Route::put('/homepage-slider-update/{id}', action: [HomepageSliderController::class, 'update'])->name('homepage-slider-update');
+    Route::get('/homepage-slider-edit/{id}', action: [HomepageSliderController::class, 'edit'])->name('homepage-slider-edit');
+    Route::delete('/homepage-slider.destroy/{id}', action: [HomepageSliderController::class, 'delete'])->name('homepage-slider.destroy');
+
     Route::get('/special-edit/{id}', action: [PromotionController::class, 'special_edit'])->name('special-edit');
     Route::put('/special-update/{id}', action: [PromotionController::class, 'special_update'])->name('special-update');
 

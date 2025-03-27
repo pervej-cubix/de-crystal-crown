@@ -13,14 +13,16 @@ use App\Models\SocialLink;
 use App\Models\Special;
 use App\Models\Stars;
 use App\Models\VirtualTour;
-use Illuminate\Http\Request;
+use App\Models\HomepageSlider;
+// use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('web.pages.home', [
+        $data = [
             'special' => Special::where('status', 1)->first(),
             'promotions' => Promotion::where('status', 1)
                 ->orderBy('created_at', 'desc')
@@ -29,7 +31,16 @@ class HomeController extends Controller
             'Recreations' => Recreation::where('status', 1)->get(),
             'accomodations' => Accomodation::where('status', 1)->get(),
             'social_link' => SocialLink::select('map_link')->where('status', 1)->first()
-        ]);
+        ];
+
+        
+        if (Request::is('/')) {
+            $data['homepage_sliders'] = HomepageSlider::where('status', 1)
+                ->orderBy('created_at', 'asc')
+                ->get();
+        }
+
+        return view('web.pages.home', $data);
     }
 
     public function accommodation()
@@ -118,10 +129,6 @@ class HomeController extends Controller
     public function contact(Request $request)
     {
         // $requestData = $request->all();
-    
-        // Print the data
-        // dd($requestData);
-        // exit();
         $addresses = Address::where('status', 1)->get();
         $social_link = SocialLink::select('map_link')->where('status', 1)->first();
 

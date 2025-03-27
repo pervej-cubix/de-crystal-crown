@@ -68,7 +68,6 @@
     </div>
 </section>
 
-
 <!-- Comfortable Stay -->
 <section id="comfortable">
     <div class="container mt-5">

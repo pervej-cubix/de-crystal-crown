@@ -74,7 +74,7 @@
             </a>
         </div>
     </div>
-    @endif
+    @endif 
 
     <div class="btn_menu in-left" bis_skin_checked="1" onclick="openMenu()">
         <div id="click_trigger" class="row_flex open" bis_skin_checked="1">
@@ -86,47 +86,45 @@
             </div>
         </div>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
-        data-bs-pause="true">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner">
-            <div class="carousel-item active">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @foreach($homepage_sliders as $index => $slider)
+            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                 <div class="carousel-overlay"></div> <!-- Dark overlay -->
-                <img class="img-fluid" src="{{ asset('/') }}assets/web/media/slide8.jpg" class="d-block w-100" alt="...">
+                @if($slider->fileType == 'video')
+                    <video class="be-bg-video d-block w-100" autoplay="autoplay" loop="loop" muted="muted" preload="auto">
+                        <source src="{{ asset('/assets/homepageSlider/' . $slider->file) }}" type="video/mp4">
+                    </video>
+                @else
+                    <img class="img-fluid" src="{{ asset('/assets/homepageSlider/' . $slider->file) }}" alt="Slide Image" class="d-block w-100">
+                @endif
             </div>
-            <div class="carousel-item">
-                <div class="carousel-overlay"></div> <!-- Dark overlay -->
-                <img class="img-fluid" src="{{ asset('/') }}assets/web/media/slide9.jpg" class="d-block w-100" alt="...">
-            </div> 
-            <div class="carousel-item">
-                <div class="carousel-overlay"></div> <!-- Dark overlay -->
-                <video class="be-bg-video d-block w-100" autoplay="autoplay" loop="loop" muted="muted" preload="auto">
-                    <source src="{{ asset('/') }}assets/web/media/video-slide1.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
+        @endforeach
+    </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+    <!-- Dynamic Indicators -->
+    <div class="carousel-indicators">
+        @foreach($homepage_sliders as $index => $slider)
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" 
+                class="{{ $index == 0 ? 'active' : '' }}" aria-current="{{ $index == 0 ? 'true' : 'false' }}" 
+                aria-label="Slide {{ $index + 1 }}"></button>
+        @endforeach
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span aria-hidden="true">
-                <i class="fa-solid fa-arrow-left-long"></i>
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
             <span aria-hidden="true">
-                <i class="fa-solid fa-arrow-right-long"></i>
+                <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
             </span>
             <span class="visually-hidden">Next</span>
         </button>
+</div>
 
-    </div
+   
+</section>

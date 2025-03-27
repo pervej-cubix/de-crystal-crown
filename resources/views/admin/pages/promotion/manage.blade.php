@@ -14,7 +14,6 @@
                     @endif
                     <form class="form-horizontal" action="{{ route('promotion-store') }}" method="post" enctype="multipart/form-data">
                         @csrf
-
                         <div class="row mb-4 mt-4">
                             <label for="productImage" class="col-md-3 form-label">Image</label>
                             <div class="col-md-9">
@@ -26,7 +25,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="row">
                             <label for="email" class="col-md-3 form-label">Publication Status</label>
                             <div class="col-md-9 mt-2 p">
