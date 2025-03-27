@@ -40,7 +40,7 @@ Route::get(uri: '/decrystal-star', action: [HomeController::class, 'loyaltyProgr
 Route::get(uri: '/contact-us', action: [HomeController::class, 'contact'])->name('contact');
 Route::get(uri: '/book-now', action: [HomeController::class, 'bookNow'])->name('bookNow');
 Route::get(uri: '/room-details/{slug}', action: [HomeController::class, 'roomDetails'])->name('roomDetails');
-Route::post(uri: '/contac-us', action: [HomeController::class, 'contactMail'])->name('contactMail');
+Route::post(uri: '/contact-us', action: [HomeController::class, 'contactMail'])->name('contactMail');
 Route::post('/reservation', [ReservationController::class, 'sendReservationMail']);
 Route::post('/reservation-check', [ReservationController::class, 'reservationCheck']);
 
