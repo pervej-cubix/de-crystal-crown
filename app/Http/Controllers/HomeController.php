@@ -14,13 +14,14 @@ use App\Models\Special;
 use App\Models\Stars;
 use App\Models\VirtualTour;
 use App\Models\HomepageSlider;
-// use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $data = [
             'special' => Special::where('status', 1)->first(),
@@ -32,9 +33,8 @@ class HomeController extends Controller
             'accomodations' => Accomodation::where('status', 1)->get(),
             'social_link' => SocialLink::select('map_link')->where('status', 1)->first()
         ];
-
         
-        if (Request::is('/')) {
+        if ($request->is('/')) {
             $data['homepage_sliders'] = HomepageSlider::where('status', 1)
                 ->orderBy('created_at', 'asc')
                 ->get();
@@ -128,7 +128,6 @@ class HomeController extends Controller
 
     public function contact(Request $request)
     {
-        // $requestData = $request->all();
         $addresses = Address::where('status', 1)->get();
         $social_link = SocialLink::select('map_link')->where('status', 1)->first();
 
@@ -137,6 +136,19 @@ class HomeController extends Controller
             'addresses' => $addresses,
             'social_link' => $social_link
         ]);
+    }
+
+    public function contactMail(Request $request) {
+        $data = $request->except('_token');
+
+        try {
+            Mail::to('pervej@cubixbd.com')->send(new ContactMail($data));
+
+            return back()->with('success', 'Your message has been sent successfully!');
+
+        } catch (Exception $e) {
+             return back()->with('error', 'Something went wrong!');
+        }
     }
 
     public function bookNow()

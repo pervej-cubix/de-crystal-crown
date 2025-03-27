@@ -35,8 +35,8 @@
                 class="menuUnderline {{ request()->routeIs('virtualTours') ? 'active' : '' }}">Virtual Tours</a>
             <a href="{{route('photoGallery')}}"
                 class="menuUnderline {{ request()->routeIs('photoGallery') ? 'active' : '' }}">Photo gallery</a>
-            <a href="{{route('DeCastleStars')}}"
-                class="menuUnderline {{ request()->routeIs('DeCastleStars') ? 'active' : '' }}">De Castle Stars</a>
+            <a href="{{route('DeCrystalStars')}}"
+                class="menuUnderline {{ request()->routeIs('DeCrystalStars') ? 'active' : '' }}">De Castle Stars</a>
             <a href="{{route('contact')}}"
                 class="menuUnderline {{ request()->routeIs('contact') ? 'active' : '' }}">Contact us</a>
         </div>

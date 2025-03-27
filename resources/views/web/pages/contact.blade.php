@@ -8,7 +8,6 @@
         <div class="row">
             <div class="col-md-12">
                 <a class="diningHeading">Contact Us</a>
-
             </div>
         </div>
     </div>
@@ -38,67 +37,48 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-7 m-auto">
-                <form>
-                    <div class="row">
-                        <!-- Left Column -->
-                        <div class="col-md-6">
-                            <!-- First Name -->
-                            <div class="mb-3">
-                                <input type="text" class="form-control formField" id="firstName"
-                                    placeholder="Enter your first name">
-                            </div>
-                            <!-- Email -->
-                            <div class="mb-3">
-                                <input type="email" class="form-control formField" id="email"
-                                    placeholder="Enter your email">
-                            </div>
+            <form action="{{ route('contactMail') }}" method="POST">
+                @csrf  <!-- Required for security in Laravel -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <input type="text" name="first_name" class="form-control formField" placeholder="Enter your first name">
                         </div>
-
-                        <!-- Right Column -->
-                        <div class="col-md-6">
-                            <!-- Last Name -->
-                            <div class="mb-3">
-
-                                <input type="text" class="form-control formField" id="lastName"
-                                    placeholder="Enter your last name">
-                            </div>
-                            <!-- Phone Number -->
-                            <div class="mb-3">
-
-                                <input type="text" class="form-control formField" id="phone"
-                                    placeholder="Enter your phone number">
-                            </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control formField" placeholder="Enter your email">
                         </div>
                     </div>
-
-                    <!-- Full-Width Section -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <input type="text" class="form-control formField" id="subject"
-                                    placeholder="Enter your subject">
-                            </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <input type="text" name="last_name" class="form-control formField" placeholder="Enter your last name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="phone" class="form-control formField" placeholder="Enter your phone number">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- Textarea -->
-                            <div class="mb-3">
-
-                                <textarea class="form-control " id="comments" rows="8"
-                                    placeholder="Enter your comments"></textarea>
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <input type="text" name="subject" class="form-control formField" placeholder="Enter your subject">
                         </div>
                     </div>
-
-                    <!-- Submit Button -->
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <button type="button" class="btn btn-outline-secondary w-100 formBtn"> <i
-                                    class="fa-solid fa-location-arrow"></i> SEND</button>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <textarea name="comments" class="form-control" rows="8" placeholder="Enter your comments"></textarea>
                         </div>
                     </div>
-                </form>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-outline-secondary w-100 formBtn">
+                            <i class="fa-solid fa-location-arrow"></i> SEND
+                        </button>
+                    </div>
+                </div>
+            </form>
             </div>
         </div>
 

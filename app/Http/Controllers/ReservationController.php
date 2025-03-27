@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 
+
 class ReservationController extends Controller
 {
     public function sendReservationMail(Request $request){
@@ -143,7 +144,6 @@ class ReservationController extends Controller
         //     'reservation_status' => 2,
         // ];
 
-        
         $server_url = "$apiUrl/store_reservation";
         $ch = curl_init();
 
