@@ -18,7 +18,7 @@
                         <label for="productImage" class="col-md-3 form-label">Image/Video</label>
                         <div class="col-md-9">
                             <div class="form-control">
-                                <input type="file" name="file" class="dropify" data-height="200" accept="image/*,video/*">
+                                <input type="file" name="file" class="dropify" data-height="200" accept="image/*,video/*" required>
                                 @if($errors->has('file'))
                                     <div class="alert alert-danger mt-1">{{ $errors->first('file') }}</div>
                                 @endif
@@ -63,7 +63,7 @@
                         <p class="alert alert-success">{{ session('message') }}</p>
                     @endif
                     @if( session('errorr') )
-                        <p class="alert alert-success">{{ session('errorr') }}</p>
+                        <p class="alert alert-success">{{ session('error') }}</p>
                     @endif
                     <div class="table-responsive">
                         <table id="example3" class="table table-bordered text-nowrap border-bottom">
@@ -89,9 +89,8 @@
                                             <span><i class="fa-solid fa-video"></i></span>
                                         @else
                                             <!-- For image, show the image itself -->
-                                            <img src="{{ asset('/assets/homepageSlider/' . $slider->file) }}" alt="Image" width="40" height="60">
-                                        @endif
-                                   
+                                            <img src="{{ asset('/assets/web/homepageSlider/' . $slider->file) }}" alt="Image" width="40" height="60">
+                                        @endif                                   
                                     </td>
                                     <td>{{$slider->fileType}}</td> 
                                     <td>{{ $slider->status == 1 ? 'Published' : 'UnPublished' }}</td>

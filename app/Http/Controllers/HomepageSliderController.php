@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\HomepageSlider;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
 
 class HomepageSliderController extends Controller
 {

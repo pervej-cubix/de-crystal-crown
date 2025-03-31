@@ -6,7 +6,7 @@
         <div class="col-lg-10 offset-lg-1 col-md-12">
             <div class="card mt-4"> 
                 <div class="card-header border-bottom">
-                    <h3 class="card-title">Update Slide</h3>
+                    <h3 class="card-title">Update Homepage slide</h3>
                 </div>
                 <div class="card-body">
                     <form class="form-horizontal" action="{{ route('homepage-slider-update', $homepageSlider->id) }}" method="post" enctype="multipart/form-data">

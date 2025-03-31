@@ -9,6 +9,7 @@ use App\Http\Controllers\MeetingController;
 use App\Http\Controllers\PhotoGalleryController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\HomepageSliderController;
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\RecreationController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SocialLinkController;
@@ -57,6 +58,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::put('/homepage-slider-update/{id}', action: [HomepageSliderController::class, 'update'])->name('homepage-slider-update');
     Route::get('/homepage-slider-edit/{id}', action: [HomepageSliderController::class, 'edit'])->name('homepage-slider-edit');
     Route::delete('/homepage-slider.destroy/{id}', action: [HomepageSliderController::class, 'delete'])->name('homepage-slider.destroy');
+
+    Route::get('/about-us-manage', action: [AboutUsController::class, 'index'])->name('aboutUs-view');
+    Route::post('/about-us-store', action: [AboutUsController::class, 'store'])->name('aboutUs-store');
+    Route::put('/about-us-update/{id}', action: [AboutUsController::class, 'update'])->name('aboutUs-update');
+    Route::get('/about-us-edit/{id}', action: [AboutUsController::class, 'edit'])->name('aboutUs-edit');
+    Route::delete('/about-us.destroy/{id}', action: [AboutUsController::class, 'delete'])->name('aboutUs.destroy');
 
     Route::get('/special-edit/{id}', action: [PromotionController::class, 'special_edit'])->name('special-edit');
     Route::put('/special-update/{id}', action: [PromotionController::class, 'special_update'])->name('special-update');

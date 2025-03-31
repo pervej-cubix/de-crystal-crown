@@ -16,8 +16,6 @@
                 @endif
                 <form class="form-horizontal" action="{{ route('tour-store') }}" method="post" enctype="multipart/form-data">
                     @csrf
-
-
                     <div class="row mb-4 mt-4">
                         <label for="image" class="col-md-3 form-label">Display Image</label>
                         <div class="col-md-9">

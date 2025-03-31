@@ -93,10 +93,10 @@
                 <div class="carousel-overlay"></div> <!-- Dark overlay -->
                 @if($slider->fileType == 'video')
                     <video class="be-bg-video d-block w-100" autoplay="autoplay" loop="loop" muted="muted" preload="auto">
-                        <source src="{{ asset('/assets/homepageSlider/' . $slider->file) }}" type="video/mp4">
+                        <source src="{{ asset('/assets/web/homepageSlider/' . $slider->file) }}" type="video/mp4">
                     </video>
                 @else
-                    <img class="img-fluid" src="{{ asset('/assets/homepageSlider/' . $slider->file) }}" alt="Slide Image" class="d-block w-100">
+                    <img class="img-fluid" src="{{ asset('/assets/web/homepageSlider/' . $slider->file) }}" alt="Slide Image" class="d-block w-100">
                 @endif
             </div>
         @endforeach

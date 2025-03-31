@@ -3,33 +3,29 @@
 @section('content')
 
 <!-- About us section -->
-<section>
-    <div class="container mt-5">
-        <div class="row align-items-center">
-            <h2 class="about-heading-first mt-4"><b>about us</b></h2> <!-- Added animation to the heading -->
-            <div class="col-md-6 sm-12 lg-3">
-                <h1 class="about-heading">A best place to enjoy your stay</h1>
-                <p class="about-paragrape">
-                    It is our immense pleasure to draw your kind attention to the premium ranked 3 Star Business Class
-                    hotel, being located at a distinctive point of Dhaka, Gulshan-1. <br />
-
-                    We would like to take this opportunity to express our sincere thanks and gratitude to you and your
-                    company for showing interest towards Hotel De Crystal Crown.
-
-                    The hotel has been a matching point for all kinds of travelers and most convenient for the business
-                    travelers.<br />
-
-                    We hope we will be able to count on your future support.
-                </p>
-            </div>
-            <div class="col-md-6">
-                <div style="overflow: hidden; height: 60vh;">
-                    <img class="zoom-out" style="width: 100%;" src="{{asset('/')}}assets/web/media/about.jpg" alt="">
+@foreach($aboutUs as $item)
+    @if($item->status == 1)
+        <section>
+            <div class="container mt-5">
+                <div class="row align-items-center">
+                    <h2 class="about-heading-first mt-4"><b>about us</b></h2>
+                    <div class="col-md-6 sm-12 lg-3">
+                        <h1 class="about-heading mb-4">{{ $item->title }}</h1>
+                        <p class="about-paragrape">
+                            {{ $item->description }}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="overflow: hidden; height: 60vh;">
+                            <img class="zoom-out" style="width: 100%;" src="{{ asset($item->image) }}" alt="{{ $item->title }}">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    @endif
+@endforeach
+
 
 <!-- What makes reayna different? -->
 <section id="different">

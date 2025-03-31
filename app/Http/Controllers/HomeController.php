@@ -14,6 +14,7 @@ use App\Models\Special;
 use App\Models\Stars;
 use App\Models\VirtualTour;
 use App\Models\HomepageSlider;
+use App\Models\AboutUs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
@@ -31,8 +32,9 @@ class HomeController extends Controller
                 ->get(),
             'Recreations' => Recreation::where('status', 1)->get(),
             'accomodations' => Accomodation::where('status', 1)->get(),
-            'social_link' => SocialLink::select('map_link')->where('status', 1)->first()
-        ];
+            'social_link' => SocialLink::select('map_link')->where('status', 1)->first(),
+            'aboutUs' => AboutUs::where('status', 1)->get()
+            ];
         
         if ($request->is('/')) {
             $data['homepage_sliders'] = HomepageSlider::where('status', 1)

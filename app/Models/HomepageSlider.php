@@ -20,7 +20,7 @@ class HomepageSlider extends Model
             self::$homepageSlider->file = self::saveFile($request);
         }
         else{
-            $defaultFilePath = 'slide8.jpg';
+            $defaultFilePath = 'default-slide.jpg';
             self::$homepageSlider->file = $defaultFilePath;
         } 
         $fileType = $request->input('fileType', 'image');  // Default to 'image' if not set
@@ -34,7 +34,7 @@ class HomepageSlider extends Model
     {
         self::$file = $request->file('file');
         self::$fileNewName = 'homepageSlider'.rand().'.'.self::$file->getClientOriginalExtension();
-        self::$directory = 'assets/homepageSlider';
+        self::$directory = 'assets/web/homepageSlider';
         self::$file->move(self::$directory,self::$fileNewName);
         self::$fileUrl = self::$fileNewName;
         return self::$fileUrl;
