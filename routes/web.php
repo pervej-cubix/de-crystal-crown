@@ -16,7 +16,7 @@ use App\Http\Controllers\SocialLinkController;
 use App\Http\Controllers\StarsController;
 use App\Http\Controllers\VirtualTourController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,6 +45,10 @@ Route::post(uri: '/contact-us', action: [HomeController::class, 'contactMail'])-
 Route::post('/reservation', [ReservationController::class, 'sendReservationMail']);
 Route::post('/reservation-check', [ReservationController::class, 'reservationCheck']);
 
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/login'); // Redirect to login page after logout
+})->name('logout');
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', [dashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/promotion-manage', action: [PromotionController::class, 'index'])->name('promotion-view');
